@@ -9,9 +9,15 @@
         <ol>
             <li v-for="item in list">{{item}}</li>
         </ol>
-        <button v-on:click="addItemClick">addItem</button>
+        <button v-on:click="addItemClick">Add item</button>
+        <transition>
+            <p v-if="show">`show` がtrueの場合のみ表示</p>
+            <p v-if="!show">`show` がfalseの場合のみ表示</p>
+        </transition>
+        <button v-on:click="show=!show">Display change</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="./main.js"></script>
+    <script src="./main.css"></script>
 </body>
 </html>

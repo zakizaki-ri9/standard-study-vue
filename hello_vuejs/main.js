@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         el: "#app",
         data: {
             message: "Hello Vue.js !!",
-            list: ["apple", "orange", "grape"]
+            list: ["apple", "orange", "grape"],
+            show: true
         },
         methods: {
             addItemClick: function(event) {
