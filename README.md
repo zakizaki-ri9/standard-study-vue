@@ -23,3 +23,13 @@
 - `v-show`
     - `display none;`で非表示となる
     - 表示切替頻度が高いならこちらのほうがパフォーマンス高い
+
+# リストの要素更新について
+
+`Vue.set` or `this.$set`を使用する。
+イメージとしては以下。
+
+```javascript
+// this.$set(更新対象, index or key, 更新する値)
+this.$set(this.list, 0, { id: 1, name: 'taro' })
+```

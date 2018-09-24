@@ -15,8 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         },
         methods: {
-            addItemClick: function(event) {
+            addItemClick: function() {
                 this.list.push("newItem" + (this.list.length + 1))
+            },
+            switchItemClick: function(index) {
+                this.$set(this.list, index, this.list[index] === "apple" ? "melon" : "apple")
             }
         }
     })

@@ -12,6 +12,7 @@
             <li v-for="item in list">{{item}}</li>
         </ol>
         <button v-on:click="addItemClick">Add item</button>
+        <button v-on:click="switchItemClick(0)">Switch top item</button>
         <transition>
             <p v-if="show">`show` がtrueの場合のみ表示</p>
             <p v-if="!show">`show` がfalseの場合のみ表示</p>
