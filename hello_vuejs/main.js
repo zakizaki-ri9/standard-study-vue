@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
         data: {
             message: "Hello Vue.js !!",
             list: ["apple", "orange", "grape"],
-            show: true
+            show: true,
+            text2: {
+                type: "textbox",
+                value: "sample"
+            }
         },
         methods: {
             addItemClick: function(event) {
