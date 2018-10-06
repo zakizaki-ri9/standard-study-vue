@@ -7,14 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
         data: function() {
             return {
                 message: {
-                    init: 'Hello Vue.js',
                     model: ''
                 }
             }
         },
+        props: ['message.init'],
         methods: {
             previewMessage: function() {
                 return this.message.model === '' ? this.message.init : this.message.model
+            }
+        }
+    })
+
+    Vue.component('parent-component', {
+        template: '<message-component></message-component>',
+        data: function() {
+            return {
+                message: {
+                    init: 'Hello Vue.js!!'
+                }
             }
         }
     })
